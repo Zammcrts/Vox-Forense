@@ -1,0 +1,11 @@
+crewai>=1.0
+owlready2>=0.46        # requiere Java (JRE) en el PATH para el razonador HermiT
+librosa>=0.10
+praat-parselmouth>=0.4
+soundfile
+scipy
+numpy
+pandas
+scikit-learn
+pytest
+# Ademas: ffmpeg instalado y en el PATH (lectura de mp3/m4a)

@@ -1,0 +1,483 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#" xml:base="https://example.org/ontologias/artefactos-audio" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:xml="http://www.w3.org/XML/1998/namespace" xmlns:xsd="http://www.w3.org/2001/XMLSchema#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" ontologyIRI="https://example.org/ontologias/artefactos-audio">
+<Prefix name="" IRI="https://example.org/ontologias/artefactos-audio#"/>
+<Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+<Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+<Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+<Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+<Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+<Annotation><AnnotationProperty abbreviatedIRI="rdfs:label"/><Literal xml:lang="es">Ontología de artefactos de audio</Literal></Annotation>
+<Annotation><AnnotationProperty abbreviatedIRI="rdfs:comment"/><Literal xml:lang="es">Ontología para diferenciar audios auténticamente humanos de audios sintéticos (deepfake) mediante axiomas sobre características espectrales, prosódicas, estadísticas y de picos/mesetas.</Literal></Annotation>
+<Declaration><Class IRI="#Audio"/></Declaration>
+<Declaration><Class IRI="#AudioAutentico"/></Declaration>
+<Declaration><Class IRI="#AudioSintetico"/></Declaration>
+<Declaration><Class IRI="#AudioSinteticoPorVocoderGAN"/></Declaration>
+<Declaration><Class IRI="#AudioSinteticoPorTTS"/></Declaration>
+<Declaration><Class IRI="#AudioSinteticoPorClonacion"/></Declaration>
+<Declaration><Class IRI="#AudioSinteticoPorConversion"/></Declaration>
+<Declaration><Class IRI="#AudioSospechoso"/></Declaration>
+<Declaration><Class IRI="#AudioSospechosoDeVocoderGAN"/></Declaration>
+<Declaration><Class IRI="#AudioConRasgosDeNaturalidad"/></Declaration>
+<Declaration><Class IRI="#AudioConEvidenciaContradictoria"/></Declaration>
+<Declaration><Class IRI="#AudioQueRequiereRevisionHumana"/></Declaration>
+<Declaration><Class IRI="#Caracteristica"/></Declaration>
+<Declaration><Class IRI="#CaracteristicaEspectral"/></Declaration>
+<Declaration><Class IRI="#CentroideEspectral"/></Declaration>
+<Declaration><Class IRI="#PlanitudEspectral"/></Declaration>
+<Declaration><Class IRI="#EnergiaDeAltaFrecuencia"/></Declaration>
+<Declaration><Class IRI="#CaracteristicaProsodica"/></Declaration>
+<Declaration><Class IRI="#Jitter"/></Declaration>
+<Declaration><Class IRI="#Shimmer"/></Declaration>
+<Declaration><Class IRI="#VariabilidadDeF0"/></Declaration>
+<Declaration><Class IRI="#CaracteristicaEstadistica"/></Declaration>
+<Declaration><Class IRI="#EstadisticaPorBandaMel"/></Declaration>
+<Declaration><Class IRI="#CaracteristicaDePicosYMesetas"/></Declaration>
+<Declaration><Class IRI="#ProporcionDeMeseta"/></Declaration>
+<Declaration><Class IRI="#ConteoDePicos"/></Declaration>
+<Declaration><Class IRI="#IndicioDeDeepfake"/></Declaration>
+<Declaration><Class IRI="#PatronDeMeseta"/></Declaration>
+<Declaration><Class IRI="#AnomaliaDeAltaFrecuencia"/></Declaration>
+<Declaration><Class IRI="#JitterAnomalo"/></Declaration>
+<Declaration><Class IRI="#ShimmerAnomalo"/></Declaration>
+<Declaration><Class IRI="#PlanitudEspectralAnomala"/></Declaration>
+<Declaration><Class IRI="#VariabilidadDeF0Anomala"/></Declaration>
+<Declaration><Class IRI="#RasgoDeNaturalidad"/></Declaration>
+<Declaration><Class IRI="#JitterNatural"/></Declaration>
+<Declaration><Class IRI="#ShimmerNatural"/></Declaration>
+<Declaration><Class IRI="#VariabilidadDeF0Natural"/></Declaration>
+<Declaration><Class IRI="#TecnicaDeSintesis"/></Declaration>
+<Declaration><Class IRI="#SintesisTextoAVoz"/></Declaration>
+<Declaration><Class IRI="#ConversionDeVoz"/></Declaration>
+<Declaration><Class IRI="#ClonacionDeVoz"/></Declaration>
+<Declaration><Class IRI="#VocoderNeuronal"/></Declaration>
+<Declaration><Class IRI="#VocoderGAN"/></Declaration>
+<Declaration><Class IRI="#Persona"/></Declaration>
+<Declaration><Class IRI="#Hablante"/></Declaration>
+<Declaration><Class IRI="#AnalistaForense"/></Declaration>
+<Declaration><Class IRI="#ModeloDeDeteccion"/></Declaration>
+<Declaration><Class IRI="#ModeloCNNLSTM"/></Declaration>
+<Declaration><Class IRI="#ResultadoDeModelo"/></Declaration>
+<Declaration><Class IRI="#CentroideEspectralAnomalo"/></Declaration>
+<Declaration><Class IRI="#CentroideEspectralNatural"/></Declaration>
+<Declaration><Class IRI="#EnergiaDeAltaFrecuenciaNatural"/></Declaration>
+<Declaration><Class IRI="#CurtosisDelEspectrograma"/></Declaration>
+<Declaration><Class IRI="#CurtosisMelAnomala"/></Declaration>
+<Declaration><Class IRI="#CurtosisMelNatural"/></Declaration>
+<Declaration><ObjectProperty IRI="#tieneCaracteristica"/></Declaration>
+<Declaration><ObjectProperty IRI="#caracteristicaDe"/></Declaration>
+<Declaration><ObjectProperty IRI="#fueGeneradoPor"/></Declaration>
+<Declaration><ObjectProperty IRI="#generaAudio"/></Declaration>
+<Declaration><ObjectProperty IRI="#producidoPor"/></Declaration>
+<Declaration><ObjectProperty IRI="#produceAudio"/></Declaration>
+<Declaration><ObjectProperty IRI="#imitaA"/></Declaration>
+<Declaration><ObjectProperty IRI="#esImitadoPor"/></Declaration>
+<Declaration><ObjectProperty IRI="#esIndicioDe"/></Declaration>
+<Declaration><ObjectProperty IRI="#tieneComoIndicio"/></Declaration>
+<Declaration><ObjectProperty IRI="#tieneIndicioDe"/></Declaration>
+<Declaration><ObjectProperty IRI="#esTecnicaSospechadaEn"/></Declaration>
+<Declaration><ObjectProperty IRI="#correlacionaCon"/></Declaration>
+<Declaration><ObjectProperty IRI="#derivaDe"/></Declaration>
+<Declaration><ObjectProperty IRI="#esOrigenDe"/></Declaration>
+<Declaration><ObjectProperty IRI="#tieneResultadoDeModelo"/></Declaration>
+<Declaration><ObjectProperty IRI="#esResultadoDeAudio"/></Declaration>
+<Declaration><ObjectProperty IRI="#generadoPorModelo"/></Declaration>
+<Declaration><ObjectProperty IRI="#produceResultado"/></Declaration>
+<Declaration><ObjectProperty IRI="#validadoPor"/></Declaration>
+<Declaration><ObjectProperty IRI="#valida"/></Declaration>
+<Declaration><DataProperty IRI="#valor"/></Declaration>
+<Declaration><DataProperty IRI="#unidadDeMedida"/></Declaration>
+<Declaration><DataProperty IRI="#bandaMel"/></Declaration>
+<Declaration><DataProperty IRI="#tipoDeEstadistica"/></Declaration>
+<Declaration><DataProperty IRI="#pesoDeEvidencia"/></Declaration>
+<Declaration><DataProperty IRI="#identificadorDeAudio"/></Declaration>
+<Declaration><DataProperty IRI="#duracionEnSegundos"/></Declaration>
+<Declaration><DataProperty IRI="#frecuenciaDeMuestreoHz"/></Declaration>
+<Declaration><DataProperty IRI="#formatoDeArchivo"/></Declaration>
+<Declaration><DataProperty IRI="#fechaDeValidacion"/></Declaration>
+<Declaration><DataProperty IRI="#scoreDeConfianza"/></Declaration>
+<Declaration><DataProperty IRI="#versionDelModelo"/></Declaration>
+<Declaration><DataProperty IRI="#anioDeAparicion"/></Declaration>
+<Declaration><DataProperty IRI="#identificadorDeHablante"/></Declaration>
+<SubClassOf><Class IRI="#AudioAutentico"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSintetico"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSinteticoPorVocoderGAN"/><Class IRI="#AudioSintetico"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSinteticoPorTTS"/><Class IRI="#AudioSintetico"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSinteticoPorClonacion"/><Class IRI="#AudioSintetico"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSinteticoPorConversion"/><Class IRI="#AudioSintetico"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSospechoso"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioSospechosoDeVocoderGAN"/><Class IRI="#AudioSospechoso"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioConRasgosDeNaturalidad"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioConEvidenciaContradictoria"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#AudioQueRequiereRevisionHumana"/><Class IRI="#Audio"/></SubClassOf>
+<SubClassOf><Class IRI="#CaracteristicaEspectral"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#CentroideEspectral"/><Class IRI="#CaracteristicaEspectral"/></SubClassOf>
+<SubClassOf><Class IRI="#PlanitudEspectral"/><Class IRI="#CaracteristicaEspectral"/></SubClassOf>
+<SubClassOf><Class IRI="#EnergiaDeAltaFrecuencia"/><Class IRI="#CaracteristicaEspectral"/></SubClassOf>
+<SubClassOf><Class IRI="#CaracteristicaProsodica"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#Jitter"/><Class IRI="#CaracteristicaProsodica"/></SubClassOf>
+<SubClassOf><Class IRI="#Shimmer"/><Class IRI="#CaracteristicaProsodica"/></SubClassOf>
+<SubClassOf><Class IRI="#VariabilidadDeF0"/><Class IRI="#CaracteristicaProsodica"/></SubClassOf>
+<SubClassOf><Class IRI="#CaracteristicaEstadistica"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#EstadisticaPorBandaMel"/><Class IRI="#CaracteristicaEstadistica"/></SubClassOf>
+<SubClassOf><Class IRI="#CaracteristicaDePicosYMesetas"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#ProporcionDeMeseta"/><Class IRI="#CaracteristicaDePicosYMesetas"/></SubClassOf>
+<SubClassOf><Class IRI="#ConteoDePicos"/><Class IRI="#CaracteristicaDePicosYMesetas"/></SubClassOf>
+<SubClassOf><Class IRI="#IndicioDeDeepfake"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#PatronDeMeseta"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#AnomaliaDeAltaFrecuencia"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#JitterAnomalo"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#ShimmerAnomalo"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#PlanitudEspectralAnomala"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#VariabilidadDeF0Anomala"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#RasgoDeNaturalidad"/><Class IRI="#Caracteristica"/></SubClassOf>
+<SubClassOf><Class IRI="#JitterNatural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<SubClassOf><Class IRI="#ShimmerNatural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<SubClassOf><Class IRI="#VariabilidadDeF0Natural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<SubClassOf><Class IRI="#SintesisTextoAVoz"/><Class IRI="#TecnicaDeSintesis"/></SubClassOf>
+<SubClassOf><Class IRI="#ConversionDeVoz"/><Class IRI="#TecnicaDeSintesis"/></SubClassOf>
+<SubClassOf><Class IRI="#ClonacionDeVoz"/><Class IRI="#TecnicaDeSintesis"/></SubClassOf>
+<SubClassOf><Class IRI="#VocoderNeuronal"/><Class IRI="#TecnicaDeSintesis"/></SubClassOf>
+<SubClassOf><Class IRI="#VocoderGAN"/><Class IRI="#VocoderNeuronal"/></SubClassOf>
+<SubClassOf><Class IRI="#Hablante"/><Class IRI="#Persona"/></SubClassOf>
+<SubClassOf><Class IRI="#AnalistaForense"/><Class IRI="#Persona"/></SubClassOf>
+<SubClassOf><Class IRI="#ModeloCNNLSTM"/><Class IRI="#ModeloDeDeteccion"/></SubClassOf>
+<SubClassOf><Class IRI="#CentroideEspectralAnomalo"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#CentroideEspectralNatural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<SubClassOf><Class IRI="#EnergiaDeAltaFrecuenciaNatural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<SubClassOf><Class IRI="#CurtosisDelEspectrograma"/><Class IRI="#CaracteristicaEstadistica"/></SubClassOf>
+<SubClassOf><Class IRI="#CurtosisMelAnomala"/><Class IRI="#IndicioDeDeepfake"/></SubClassOf>
+<SubClassOf><Class IRI="#CurtosisMelNatural"/><Class IRI="#RasgoDeNaturalidad"/></SubClassOf>
+<DisjointClasses><Class IRI="#Audio"/><Class IRI="#Caracteristica"/><Class IRI="#TecnicaDeSintesis"/><Class IRI="#Persona"/><Class IRI="#ModeloDeDeteccion"/><Class IRI="#ResultadoDeModelo"/></DisjointClasses>
+<DisjointClasses><Class IRI="#AudioAutentico"/><Class IRI="#AudioSintetico"/></DisjointClasses>
+<DisjointClasses><Class IRI="#CaracteristicaEspectral"/><Class IRI="#CaracteristicaProsodica"/><Class IRI="#CaracteristicaEstadistica"/><Class IRI="#CaracteristicaDePicosYMesetas"/></DisjointClasses>
+<DisjointClasses><Class IRI="#CentroideEspectral"/><Class IRI="#PlanitudEspectral"/><Class IRI="#EnergiaDeAltaFrecuencia"/></DisjointClasses>
+<DisjointClasses><Class IRI="#Jitter"/><Class IRI="#Shimmer"/><Class IRI="#VariabilidadDeF0"/></DisjointClasses>
+<DisjointClasses><Class IRI="#ProporcionDeMeseta"/><Class IRI="#ConteoDePicos"/></DisjointClasses>
+<DisjointClasses><Class IRI="#IndicioDeDeepfake"/><Class IRI="#RasgoDeNaturalidad"/></DisjointClasses>
+<DisjointClasses><Class IRI="#JitterNatural"/><Class IRI="#JitterAnomalo"/></DisjointClasses>
+<DisjointClasses><Class IRI="#ShimmerNatural"/><Class IRI="#ShimmerAnomalo"/></DisjointClasses>
+<DisjointClasses><Class IRI="#VariabilidadDeF0Natural"/><Class IRI="#VariabilidadDeF0Anomala"/></DisjointClasses>
+<DisjointClasses><Class IRI="#Hablante"/><Class IRI="#AnalistaForense"/></DisjointClasses>
+<DisjointClasses><Class IRI="#CentroideEspectralAnomalo"/><Class IRI="#CentroideEspectralNatural"/></DisjointClasses>
+<DisjointClasses><Class IRI="#AnomaliaDeAltaFrecuencia"/><Class IRI="#EnergiaDeAltaFrecuenciaNatural"/></DisjointClasses>
+<DisjointClasses><Class IRI="#CurtosisMelAnomala"/><Class IRI="#CurtosisMelNatural"/></DisjointClasses>
+<DisjointClasses><Class IRI="#VariabilidadDeF0Anomala"/><Class IRI="#VariabilidadDeF0Natural"/></DisjointClasses>
+<DisjointClasses><Class IRI="#JitterAnomalo"/><Class IRI="#JitterNatural"/></DisjointClasses>
+<EquivalentClasses><Class IRI="#PatronDeMeseta"/><ObjectIntersectionOf><Class IRI="#ProporcionDeMeseta"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.60</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#PatronDeMeseta"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderGAN"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#ShimmerAnomalo"/><ObjectIntersectionOf><Class IRI="#Shimmer"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.01</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#ShimmerAnomalo"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderNeuronal"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#PlanitudEspectralAnomala"/><ObjectIntersectionOf><Class IRI="#PlanitudEspectral"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.30</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#PlanitudEspectralAnomala"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#SintesisTextoAVoz"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#CentroideEspectralAnomalo"/><ObjectIntersectionOf><Class IRI="#CentroideEspectral"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1408.1997743500683</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#CentroideEspectralAnomalo"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderNeuronal"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#AnomaliaDeAltaFrecuencia"/><ObjectIntersectionOf><Class IRI="#EnergiaDeAltaFrecuencia"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.00258311969228083</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#AnomaliaDeAltaFrecuencia"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderNeuronal"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#CurtosisMelAnomala"/><ObjectIntersectionOf><Class IRI="#CurtosisDelEspectrograma"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-0.611831521987915</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#CurtosisMelAnomala"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderNeuronal"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#VariabilidadDeF0Anomala"/><ObjectIntersectionOf><Class IRI="#VariabilidadDeF0"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.23908980545700237</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#VariabilidadDeF0Anomala"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#SintesisTextoAVoz"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#JitterAnomalo"/><ObjectIntersectionOf><Class IRI="#Jitter"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0226122538642538</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#JitterAnomalo"/><ObjectSomeValuesFrom><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#VocoderGAN"/></ObjectSomeValuesFrom></SubClassOf>
+<EquivalentClasses><Class IRI="#ShimmerNatural"/><ObjectIntersectionOf><Class IRI="#Shimmer"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.01</Literal></FacetRestriction><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.10</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#CentroideEspectralNatural"/><ObjectIntersectionOf><Class IRI="#CentroideEspectral"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1408.1997743500683</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#EnergiaDeAltaFrecuenciaNatural"/><ObjectIntersectionOf><Class IRI="#EnergiaDeAltaFrecuencia"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.00258311969228083</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#CurtosisMelNatural"/><ObjectIntersectionOf><Class IRI="#CurtosisDelEspectrograma"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">-0.4428684711456299</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#VariabilidadDeF0Natural"/><ObjectIntersectionOf><Class IRI="#VariabilidadDeF0"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.19372560869311511</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#JitterNatural"/><ObjectIntersectionOf><Class IRI="#Jitter"/><DataSomeValuesFrom><DataProperty IRI="#valor"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.02611244569998826</Literal></FacetRestriction></DatatypeRestriction></DataSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioSospechoso"/><ObjectIntersectionOf><Class IRI="#Audio"/><ObjectSomeValuesFrom><ObjectProperty IRI="#tieneCaracteristica"/><Class IRI="#IndicioDeDeepfake"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioSospechosoDeVocoderGAN"/><ObjectIntersectionOf><Class IRI="#Audio"/><ObjectSomeValuesFrom><ObjectProperty IRI="#tieneIndicioDe"/><Class IRI="#VocoderGAN"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioConRasgosDeNaturalidad"/><ObjectIntersectionOf><Class IRI="#Audio"/><ObjectSomeValuesFrom><ObjectProperty IRI="#tieneCaracteristica"/><Class IRI="#RasgoDeNaturalidad"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioConEvidenciaContradictoria"/><ObjectIntersectionOf><Class IRI="#AudioSospechoso"/><Class IRI="#AudioConRasgosDeNaturalidad"/></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#AudioConEvidenciaContradictoria"/><Class IRI="#AudioQueRequiereRevisionHumana"/></SubClassOf>
+<EquivalentClasses><Class IRI="#AudioSinteticoPorVocoderGAN"/><ObjectIntersectionOf><Class IRI="#AudioSintetico"/><ObjectSomeValuesFrom><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#VocoderGAN"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioSinteticoPorTTS"/><ObjectIntersectionOf><Class IRI="#AudioSintetico"/><ObjectSomeValuesFrom><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#SintesisTextoAVoz"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioSinteticoPorClonacion"/><ObjectIntersectionOf><Class IRI="#AudioSintetico"/><ObjectSomeValuesFrom><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#ClonacionDeVoz"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<EquivalentClasses><Class IRI="#AudioSinteticoPorConversion"/><ObjectIntersectionOf><Class IRI="#AudioSintetico"/><ObjectSomeValuesFrom><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#ConversionDeVoz"/></ObjectSomeValuesFrom></ObjectIntersectionOf></EquivalentClasses>
+<SubClassOf><Class IRI="#AudioAutentico"/><ObjectExactCardinality cardinality="1"><ObjectProperty IRI="#producidoPor"/><Class IRI="#Hablante"/></ObjectExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#AudioAutentico"/><ObjectMaxCardinality cardinality="0"><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#TecnicaDeSintesis"/></ObjectMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#AudioAutentico"/><ObjectMaxCardinality cardinality="0"><ObjectProperty IRI="#imitaA"/><Class IRI="#Hablante"/></ObjectMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#AudioSintetico"/><ObjectMinCardinality cardinality="1"><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#TecnicaDeSintesis"/></ObjectMinCardinality></SubClassOf>
+<SubClassOf><Class IRI="#AudioSintetico"/><ObjectMaxCardinality cardinality="1"><ObjectProperty IRI="#imitaA"/><Class IRI="#Hablante"/></ObjectMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Caracteristica"/><ObjectExactCardinality cardinality="1"><ObjectProperty IRI="#caracteristicaDe"/><Class IRI="#Audio"/></ObjectExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#ResultadoDeModelo"/><ObjectExactCardinality cardinality="1"><ObjectProperty IRI="#esResultadoDeAudio"/><Class IRI="#Audio"/></ObjectExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#ResultadoDeModelo"/><ObjectExactCardinality cardinality="1"><ObjectProperty IRI="#generadoPorModelo"/><Class IRI="#ModeloDeDeteccion"/></ObjectExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Audio"/><DataExactCardinality cardinality="1"><DataProperty IRI="#identificadorDeAudio"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Audio"/><DataExactCardinality cardinality="1"><DataProperty IRI="#duracionEnSegundos"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Audio"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#frecuenciaDeMuestreoHz"/></DataMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Audio"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#formatoDeArchivo"/></DataMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Audio"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#fechaDeValidacion"/></DataMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Caracteristica"/><DataExactCardinality cardinality="1"><DataProperty IRI="#valor"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Caracteristica"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#unidadDeMedida"/></DataMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#EstadisticaPorBandaMel"/><DataExactCardinality cardinality="1"><DataProperty IRI="#bandaMel"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#EstadisticaPorBandaMel"/><DataExactCardinality cardinality="1"><DataProperty IRI="#tipoDeEstadistica"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#IndicioDeDeepfake"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#pesoDeEvidencia"/></DataMaxCardinality></SubClassOf>
+<SubClassOf><Class IRI="#Hablante"/><DataExactCardinality cardinality="1"><DataProperty IRI="#identificadorDeHablante"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#ResultadoDeModelo"/><DataExactCardinality cardinality="1"><DataProperty IRI="#scoreDeConfianza"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#ModeloDeDeteccion"/><DataExactCardinality cardinality="1"><DataProperty IRI="#versionDelModelo"/></DataExactCardinality></SubClassOf>
+<SubClassOf><Class IRI="#TecnicaDeSintesis"/><DataMaxCardinality cardinality="1"><DataProperty IRI="#anioDeAparicion"/></DataMaxCardinality></SubClassOf>
+<InverseObjectProperties><ObjectProperty IRI="#tieneCaracteristica"/><ObjectProperty IRI="#caracteristicaDe"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#fueGeneradoPor"/><ObjectProperty IRI="#generaAudio"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#producidoPor"/><ObjectProperty IRI="#produceAudio"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#imitaA"/><ObjectProperty IRI="#esImitadoPor"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#esIndicioDe"/><ObjectProperty IRI="#tieneComoIndicio"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#tieneIndicioDe"/><ObjectProperty IRI="#esTecnicaSospechadaEn"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#derivaDe"/><ObjectProperty IRI="#esOrigenDe"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#tieneResultadoDeModelo"/><ObjectProperty IRI="#esResultadoDeAudio"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#generadoPorModelo"/><ObjectProperty IRI="#produceResultado"/></InverseObjectProperties>
+<InverseObjectProperties><ObjectProperty IRI="#validadoPor"/><ObjectProperty IRI="#valida"/></InverseObjectProperties>
+<ObjectPropertyDomain><ObjectProperty IRI="#tieneCaracteristica"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#tieneCaracteristica"/><Class IRI="#Caracteristica"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#fueGeneradoPor"/><Class IRI="#TecnicaDeSintesis"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#producidoPor"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#producidoPor"/><Class IRI="#Hablante"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#imitaA"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#imitaA"/><Class IRI="#Hablante"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#IndicioDeDeepfake"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#esIndicioDe"/><Class IRI="#TecnicaDeSintesis"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#tieneIndicioDe"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#tieneIndicioDe"/><Class IRI="#TecnicaDeSintesis"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#correlacionaCon"/><Class IRI="#Caracteristica"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#correlacionaCon"/><Class IRI="#Caracteristica"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#derivaDe"/><Class IRI="#TecnicaDeSintesis"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#derivaDe"/><Class IRI="#TecnicaDeSintesis"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#tieneResultadoDeModelo"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#tieneResultadoDeModelo"/><Class IRI="#ResultadoDeModelo"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#generadoPorModelo"/><Class IRI="#ResultadoDeModelo"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#generadoPorModelo"/><Class IRI="#ModeloDeDeteccion"/></ObjectPropertyRange>
+<ObjectPropertyDomain><ObjectProperty IRI="#validadoPor"/><Class IRI="#Audio"/></ObjectPropertyDomain>
+<ObjectPropertyRange><ObjectProperty IRI="#validadoPor"/><Class IRI="#AnalistaForense"/></ObjectPropertyRange>
+<InverseFunctionalObjectProperty><ObjectProperty IRI="#tieneCaracteristica"/></InverseFunctionalObjectProperty>
+<FunctionalObjectProperty><ObjectProperty IRI="#caracteristicaDe"/></FunctionalObjectProperty>
+<InverseFunctionalObjectProperty><ObjectProperty IRI="#tieneResultadoDeModelo"/></InverseFunctionalObjectProperty>
+<FunctionalObjectProperty><ObjectProperty IRI="#esResultadoDeAudio"/></FunctionalObjectProperty>
+<FunctionalObjectProperty><ObjectProperty IRI="#generadoPorModelo"/></FunctionalObjectProperty>
+<SymmetricObjectProperty><ObjectProperty IRI="#correlacionaCon"/></SymmetricObjectProperty>
+<IrreflexiveObjectProperty><ObjectProperty IRI="#correlacionaCon"/></IrreflexiveObjectProperty>
+<TransitiveObjectProperty><ObjectProperty IRI="#derivaDe"/></TransitiveObjectProperty>
+<DisjointObjectProperties><ObjectProperty IRI="#producidoPor"/><ObjectProperty IRI="#imitaA"/></DisjointObjectProperties>
+<SubObjectPropertyOf><ObjectPropertyChain><ObjectProperty IRI="#tieneCaracteristica"/><ObjectProperty IRI="#esIndicioDe"/></ObjectPropertyChain><ObjectProperty IRI="#tieneIndicioDe"/></SubObjectPropertyOf>
+<DataPropertyDomain><DataProperty IRI="#valor"/><Class IRI="#Caracteristica"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#valor"/><Datatype abbreviatedIRI="xsd:double"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#valor"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#unidadDeMedida"/><Class IRI="#Caracteristica"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#unidadDeMedida"/><Datatype abbreviatedIRI="xsd:string"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#unidadDeMedida"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#bandaMel"/><Class IRI="#EstadisticaPorBandaMel"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#bandaMel"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:integer"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal></FacetRestriction><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">128</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#bandaMel"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#tipoDeEstadistica"/><Class IRI="#EstadisticaPorBandaMel"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#tipoDeEstadistica"/><DataOneOf><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">media</Literal><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">desviacion</Literal><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">asimetria</Literal><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#string">curtosis</Literal></DataOneOf></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#tipoDeEstadistica"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#pesoDeEvidencia"/><Class IRI="#IndicioDeDeepfake"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#pesoDeEvidencia"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal></FacetRestriction><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#pesoDeEvidencia"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#identificadorDeAudio"/><Class IRI="#Audio"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#identificadorDeAudio"/><Datatype abbreviatedIRI="xsd:string"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#identificadorDeAudio"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#duracionEnSegundos"/><Class IRI="#Audio"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#duracionEnSegundos"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minExclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#duracionEnSegundos"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#frecuenciaDeMuestreoHz"/><Class IRI="#Audio"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#frecuenciaDeMuestreoHz"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:integer"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#frecuenciaDeMuestreoHz"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#formatoDeArchivo"/><Class IRI="#Audio"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#formatoDeArchivo"/><Datatype abbreviatedIRI="xsd:string"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#formatoDeArchivo"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#fechaDeValidacion"/><Class IRI="#Audio"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#fechaDeValidacion"/><Datatype abbreviatedIRI="xsd:dateTime"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#fechaDeValidacion"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#scoreDeConfianza"/><Class IRI="#ResultadoDeModelo"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#scoreDeConfianza"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:double"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">0.0</Literal></FacetRestriction><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#double">1.0</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#scoreDeConfianza"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#versionDelModelo"/><Class IRI="#ModeloDeDeteccion"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#versionDelModelo"/><Datatype abbreviatedIRI="xsd:string"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#versionDelModelo"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#anioDeAparicion"/><Class IRI="#TecnicaDeSintesis"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#anioDeAparicion"/><DatatypeRestriction><Datatype abbreviatedIRI="xsd:integer"/><FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive"><Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">1950</Literal></FacetRestriction></DatatypeRestriction></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#anioDeAparicion"/></FunctionalDataProperty>
+<DataPropertyDomain><DataProperty IRI="#identificadorDeHablante"/><Class IRI="#Hablante"/></DataPropertyDomain>
+<DataPropertyRange><DataProperty IRI="#identificadorDeHablante"/><Datatype abbreviatedIRI="xsd:string"/></DataPropertyRange>
+<FunctionalDataProperty><DataProperty IRI="#identificadorDeHablante"/></FunctionalDataProperty>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Audio</IRI><Literal xml:lang="es">Audio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Audio</IRI><Literal xml:lang="es">Grabación de audio de voz sujeta a análisis forense.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioAutentico</IRI><Literal xml:lang="es">Audio auténtico</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioAutentico</IRI><Literal xml:lang="es">Audio producido por la voz de una persona real (etiqueta de referencia).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSintetico</IRI><Literal xml:lang="es">Audio sintético</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSintetico</IRI><Literal xml:lang="es">Audio generado o modificado por un modelo de síntesis de voz (etiqueta de referencia).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSinteticoPorVocoderGAN</IRI><Literal xml:lang="es">Audio sintético por vocoder GAN</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSinteticoPorVocoderGAN</IRI><Literal xml:lang="es">Audio sintético generado con un vocoder GAN.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSinteticoPorTTS</IRI><Literal xml:lang="es">Audio sintético por TTS</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSinteticoPorTTS</IRI><Literal xml:lang="es">Audio sintético generado con síntesis de texto a voz.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSinteticoPorClonacion</IRI><Literal xml:lang="es">Audio sintético por clonación</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSinteticoPorClonacion</IRI><Literal xml:lang="es">Audio sintético generado con clonación de voz.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSinteticoPorConversion</IRI><Literal xml:lang="es">Audio sintético por conversión</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSinteticoPorConversion</IRI><Literal xml:lang="es">Audio sintético generado con conversión de voz.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSospechoso</IRI><Literal xml:lang="es">Audio sospechoso</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSospechoso</IRI><Literal xml:lang="es">Audio con al menos una característica que es indicio de deepfake (clasificado por razonador).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioSospechosoDeVocoderGAN</IRI><Literal xml:lang="es">Audio sospechoso de vocoder GAN</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioSospechosoDeVocoderGAN</IRI><Literal xml:lang="es">Audio sospechoso cuyos indicios apuntan a un vocoder GAN.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioConRasgosDeNaturalidad</IRI><Literal xml:lang="es">Audio con rasgos de naturalidad</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioConRasgosDeNaturalidad</IRI><Literal xml:lang="es">Audio con al menos un rasgo compatible con voz humana natural.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioConEvidenciaContradictoria</IRI><Literal xml:lang="es">Audio con evidencia contradictoria</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioConEvidenciaContradictoria</IRI><Literal xml:lang="es">Audio con indicios de deepfake y rasgos de naturalidad a la vez.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AudioQueRequiereRevisionHumana</IRI><Literal xml:lang="es">Audio que requiere revisión humana</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AudioQueRequiereRevisionHumana</IRI><Literal xml:lang="es">Audio cuyo caso debe escalarse a un analista forense.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Caracteristica</IRI><Literal xml:lang="es">Característica</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Caracteristica</IRI><Literal xml:lang="es">Medida extraida del audio (vector de caracteristicas).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CaracteristicaEspectral</IRI><Literal xml:lang="es">Característica espectral</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CaracteristicaEspectral</IRI><Literal xml:lang="es">Medida derivada del espectro o del espectrograma mel.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CentroideEspectral</IRI><Literal xml:lang="es">Centroide espectral</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CentroideEspectral</IRI><Literal xml:lang="es">Centro de masa del espectro.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#PlanitudEspectral</IRI><Literal xml:lang="es">Planitud espectral</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#PlanitudEspectral</IRI><Literal xml:lang="es">Relación entre media geometrica y aritmetica del espectro (0 a 1).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#EnergiaDeAltaFrecuencia</IRI><Literal xml:lang="es">Energía de alta frecuencia</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#EnergiaDeAltaFrecuencia</IRI><Literal xml:lang="es">Proporcion de energía en bandas de alta frecuencia.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CaracteristicaProsodica</IRI><Literal xml:lang="es">Característica prosódica</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CaracteristicaProsodica</IRI><Literal xml:lang="es">Medida de entonación, ritmo o microperturbaciones de la voz.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Jitter</IRI><Literal xml:lang="es">Jitter</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Jitter</IRI><Literal xml:lang="es">Variación ciclo a ciclo del periodo fundamental (fracción).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Shimmer</IRI><Literal xml:lang="es">Shimmer</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Shimmer</IRI><Literal xml:lang="es">Variación ciclo a ciclo de la amplitud (fracción).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#VariabilidadDeF0</IRI><Literal xml:lang="es">Variabilidad de F0</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#VariabilidadDeF0</IRI><Literal xml:lang="es">Coeficiente de variación de la frecuencia fundamental.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CaracteristicaEstadistica</IRI><Literal xml:lang="es">Característica estadística</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CaracteristicaEstadistica</IRI><Literal xml:lang="es">Estadistico resumen del espectrograma mel.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#EstadisticaPorBandaMel</IRI><Literal xml:lang="es">Estadística por banda mel</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#EstadisticaPorBandaMel</IRI><Literal xml:lang="es">Estadistico calculado sobre una banda mel concreta.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CaracteristicaDePicosYMesetas</IRI><Literal xml:lang="es">Característica de picos Y mesetas</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CaracteristicaDePicosYMesetas</IRI><Literal xml:lang="es">Medida de picos y mesetas del espectro.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ProporcionDeMeseta</IRI><Literal xml:lang="es">Proporcion de meseta</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ProporcionDeMeseta</IRI><Literal xml:lang="es">Fracción del espectro con comportamiento de meseta.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ConteoDePicos</IRI><Literal xml:lang="es">Conteo de picos</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ConteoDePicos</IRI><Literal xml:lang="es">Número de picos espectrales detectados.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#IndicioDeDeepfake</IRI><Literal xml:lang="es">Indicio de deepfake</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#IndicioDeDeepfake</IRI><Literal xml:lang="es">Característica anómala asociada a tecnicas de síntesis.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#PatronDeMeseta</IRI><Literal xml:lang="es">Patron de meseta</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#PatronDeMeseta</IRI><Literal xml:lang="es">Proporcion de meseta alta (&gt;= 0.60).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AnomaliaDeAltaFrecuencia</IRI><Literal xml:lang="es">Anomalía de alta frecuencia</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AnomaliaDeAltaFrecuencia</IRI><Literal xml:lang="es">Indicio calibrado con datos: hf_energy con valor mayor que 0.00258312 (en el audio sintético el valor tiende a ser alto).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#JitterAnomalo</IRI><Literal xml:lang="es">Jitter anómalo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#JitterAnomalo</IRI><Literal xml:lang="es">Indicio calibrado con datos: jitter con valor menor que 0.0226123 (en el audio sintético el valor tiende a ser bajo).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ShimmerAnomalo</IRI><Literal xml:lang="es">Shimmer anómalo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ShimmerAnomalo</IRI><Literal xml:lang="es">Shimmer demasiado bajo (&lt; 0.01).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#PlanitudEspectralAnomala</IRI><Literal xml:lang="es">Planitud espectral anómala</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#PlanitudEspectralAnomala</IRI><Literal xml:lang="es">Planitud espectral alta (&gt;= 0.30).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#VariabilidadDeF0Anomala</IRI><Literal xml:lang="es">Variabilidad de F0 anómala</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#VariabilidadDeF0Anomala</IRI><Literal xml:lang="es">Indicio calibrado con datos: f0_var con valor mayor que 0.23909 (en el audio sintético el valor tiende a ser alto).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#RasgoDeNaturalidad</IRI><Literal xml:lang="es">Rasgo de naturalidad</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#RasgoDeNaturalidad</IRI><Literal xml:lang="es">Característica compatible con voz humana natural.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#JitterNatural</IRI><Literal xml:lang="es">Jitter natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#JitterNatural</IRI><Literal xml:lang="es">Rasgo de naturalidad calibrado con datos: jitter con valor mayor que 0.0261124.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ShimmerNatural</IRI><Literal xml:lang="es">Shimmer natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ShimmerNatural</IRI><Literal xml:lang="es">Shimmer en rango humano tipico [0.01, 0.10].</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#VariabilidadDeF0Natural</IRI><Literal xml:lang="es">Variabilidad de F0 natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#VariabilidadDeF0Natural</IRI><Literal xml:lang="es">Rasgo de naturalidad calibrado con datos: f0_var con valor menor que 0.193726.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#TecnicaDeSintesis</IRI><Literal xml:lang="es">Técnica de síntesis</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#TecnicaDeSintesis</IRI><Literal xml:lang="es">Técnica o componente de generación de voz sintetica.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#SintesisTextoAVoz</IRI><Literal xml:lang="es">Síntesis texto A voz</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#SintesisTextoAVoz</IRI><Literal xml:lang="es">Síntesis de texto a voz (TTS).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ConversionDeVoz</IRI><Literal xml:lang="es">Conversión de voz</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ConversionDeVoz</IRI><Literal xml:lang="es">Conversión de la voz de un hablante en la de otro.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ClonacionDeVoz</IRI><Literal xml:lang="es">Clonación de voz</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ClonacionDeVoz</IRI><Literal xml:lang="es">Clonación de la voz de un hablante a partir de muestras.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#VocoderNeuronal</IRI><Literal xml:lang="es">Vocoder neuronal</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#VocoderNeuronal</IRI><Literal xml:lang="es">Vocoder basado en redes neuronales.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#VocoderGAN</IRI><Literal xml:lang="es">Vocoder GAN</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#VocoderGAN</IRI><Literal xml:lang="es">Vocoder entrenado de forma adversaria (GAN).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Persona</IRI><Literal xml:lang="es">Persona</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Persona</IRI><Literal xml:lang="es">Persona involucrada en el sistema.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#Hablante</IRI><Literal xml:lang="es">Hablante</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#Hablante</IRI><Literal xml:lang="es">Persona cuya voz es producida o imitada (identificada de forma anonima).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#AnalistaForense</IRI><Literal xml:lang="es">Analista forense</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#AnalistaForense</IRI><Literal xml:lang="es">Experto humano que valida o corrige el conocimiento.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ModeloDeDeteccion</IRI><Literal xml:lang="es">Modelo de detección</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ModeloDeDeteccion</IRI><Literal xml:lang="es">Modelo automatico de clasificación de audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ModeloCNNLSTM</IRI><Literal xml:lang="es">Modelo CNNLSTM</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ModeloCNNLSTM</IRI><Literal xml:lang="es">Modelo CNN+LSTM del sistema base.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#ResultadoDeModelo</IRI><Literal xml:lang="es">Resultado de modelo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#ResultadoDeModelo</IRI><Literal xml:lang="es">Salida de un modelo de detección para un audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CentroideEspectralAnomalo</IRI><Literal xml:lang="es">Centroide espectral anómalo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CentroideEspectralAnomalo</IRI><Literal xml:lang="es">Indicio calibrado con datos: spectral_centroid con valor mayor que 1408.2 (en el audio sintético el valor tiende a ser alto).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CentroideEspectralNatural</IRI><Literal xml:lang="es">Centroide espectral natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CentroideEspectralNatural</IRI><Literal xml:lang="es">Rasgo de naturalidad calibrado con datos: spectral_centroid con valor menor que 1408.2.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#EnergiaDeAltaFrecuenciaNatural</IRI><Literal xml:lang="es">Energía de alta frecuencia natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#EnergiaDeAltaFrecuenciaNatural</IRI><Literal xml:lang="es">Rasgo de naturalidad calibrado con datos: hf_energy con valor menor que 0.00258312.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CurtosisDelEspectrograma</IRI><Literal xml:lang="es">Curtosis del espectrograma</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CurtosisDelEspectrograma</IRI><Literal xml:lang="es">Curtosis de los valores del espectrograma mel (rasgo calibrado).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CurtosisMelAnomala</IRI><Literal xml:lang="es">Curtosis mel anómala</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CurtosisMelAnomala</IRI><Literal xml:lang="es">Indicio calibrado con datos: mel_kurt con valor menor que -0.611832 (en el audio sintético el valor tiende a ser bajo).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#CurtosisMelNatural</IRI><Literal xml:lang="es">Curtosis mel natural</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#CurtosisMelNatural</IRI><Literal xml:lang="es">Rasgo de naturalidad calibrado con datos: mel_kurt con valor mayor que -0.442868.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#tieneCaracteristica</IRI><Literal xml:lang="es">Tiene característica</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#tieneCaracteristica</IRI><Literal xml:lang="es">Relaciona un audio con una de sus caracteristicas.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#caracteristicaDe</IRI><Literal xml:lang="es">Caracteristica de</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#caracteristicaDe</IRI><Literal xml:lang="es">Inversa de tieneCaracteristica.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#fueGeneradoPor</IRI><Literal xml:lang="es">Fue generado por</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#fueGeneradoPor</IRI><Literal xml:lang="es">Técnica de síntesis con la que se genero un audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#generaAudio</IRI><Literal xml:lang="es">Genera audio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#generaAudio</IRI><Literal xml:lang="es">Inversa de fueGeneradoPor.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#producidoPor</IRI><Literal xml:lang="es">Producido por</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#producidoPor</IRI><Literal xml:lang="es">Hablante real que produjo un audio auténtico.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#produceAudio</IRI><Literal xml:lang="es">Produce audio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#produceAudio</IRI><Literal xml:lang="es">Inversa de producidoPor.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#imitaA</IRI><Literal xml:lang="es">Imita A</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#imitaA</IRI><Literal xml:lang="es">Hablante cuya voz imita un audio sintético.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#esImitadoPor</IRI><Literal xml:lang="es">Es imitado por</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#esImitadoPor</IRI><Literal xml:lang="es">Inversa de imitaA.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#esIndicioDe</IRI><Literal xml:lang="es">Es indicio de</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#esIndicioDe</IRI><Literal xml:lang="es">Técnica de síntesis a la que apunta un indicio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#tieneComoIndicio</IRI><Literal xml:lang="es">Tiene como indicio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#tieneComoIndicio</IRI><Literal xml:lang="es">Inversa de esIndicioDe.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#tieneIndicioDe</IRI><Literal xml:lang="es">Tiene indicio de</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#tieneIndicioDe</IRI><Literal xml:lang="es">Técnica de síntesis sospechada en un audio (inferida por cadena).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#esTecnicaSospechadaEn</IRI><Literal xml:lang="es">Es técnica sospechada en</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#esTecnicaSospechadaEn</IRI><Literal xml:lang="es">Inversa de tieneIndicioDe.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#correlacionaCon</IRI><Literal xml:lang="es">Correlaciona con</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#correlacionaCon</IRI><Literal xml:lang="es">Dos caracteristicas que covarian (simetrica).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#derivaDe</IRI><Literal xml:lang="es">Deriva de</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#derivaDe</IRI><Literal xml:lang="es">Una técnica de síntesis deriva de otra (transitiva).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#esOrigenDe</IRI><Literal xml:lang="es">Es origen de</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#esOrigenDe</IRI><Literal xml:lang="es">Inversa de derivaDe.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#tieneResultadoDeModelo</IRI><Literal xml:lang="es">Tiene resultado de modelo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#tieneResultadoDeModelo</IRI><Literal xml:lang="es">Resultado de un modelo para un audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#esResultadoDeAudio</IRI><Literal xml:lang="es">Es resultado de audio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#esResultadoDeAudio</IRI><Literal xml:lang="es">Inversa de tieneResultadoDeModelo.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#generadoPorModelo</IRI><Literal xml:lang="es">Generado por modelo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#generadoPorModelo</IRI><Literal xml:lang="es">Modelo que produjo un resultado.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#produceResultado</IRI><Literal xml:lang="es">Produce resultado</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#produceResultado</IRI><Literal xml:lang="es">Inversa de generadoPorModelo.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#validadoPor</IRI><Literal xml:lang="es">Validado por</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#validadoPor</IRI><Literal xml:lang="es">Analista forense que valido el audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#valida</IRI><Literal xml:lang="es">Valida</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#valida</IRI><Literal xml:lang="es">Inversa de validadoPor.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#valor</IRI><Literal xml:lang="es">Valor</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#valor</IRI><Literal xml:lang="es">Valor numérico de una característica.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#unidadDeMedida</IRI><Literal xml:lang="es">Unidad de medida</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#unidadDeMedida</IRI><Literal xml:lang="es">Unidad de medida de la característica.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#bandaMel</IRI><Literal xml:lang="es">Banda mel</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#bandaMel</IRI><Literal xml:lang="es">Índice de la banda mel (1 a 128).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#tipoDeEstadistica</IRI><Literal xml:lang="es">Tipo de estadística</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#tipoDeEstadistica</IRI><Literal xml:lang="es">Estadistico calculado: media, desviacion, asimetria o curtosis.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#pesoDeEvidencia</IRI><Literal xml:lang="es">Peso de evidencia</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#pesoDeEvidencia</IRI><Literal xml:lang="es">Peso del indicio para el arbitraje de conflictos [0,1].</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#identificadorDeAudio</IRI><Literal xml:lang="es">Identificador de audio</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#identificadorDeAudio</IRI><Literal xml:lang="es">Identificador único del audio.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#duracionEnSegundos</IRI><Literal xml:lang="es">Duracion en segundos</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#duracionEnSegundos</IRI><Literal xml:lang="es">Duración del audio en segundos (&gt; 0).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#frecuenciaDeMuestreoHz</IRI><Literal xml:lang="es">Frecuencia de muestreo hz</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#frecuenciaDeMuestreoHz</IRI><Literal xml:lang="es">Frecuencia de muestreo en Hz.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#formatoDeArchivo</IRI><Literal xml:lang="es">Formato de archivo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#formatoDeArchivo</IRI><Literal xml:lang="es">Formato del archivo (wav, flac, mp3...).</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#fechaDeValidacion</IRI><Literal xml:lang="es">Fecha de validación</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#fechaDeValidacion</IRI><Literal xml:lang="es">Fecha y hora de la validación por un analista.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#scoreDeConfianza</IRI><Literal xml:lang="es">Score de confianza</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#scoreDeConfianza</IRI><Literal xml:lang="es">Probabilidad que reporta el modelo de detección [0,1].</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#versionDelModelo</IRI><Literal xml:lang="es">Version del modelo</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#versionDelModelo</IRI><Literal xml:lang="es">Versión del modelo de detección.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#anioDeAparicion</IRI><Literal xml:lang="es">Anio de aparicion</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#anioDeAparicion</IRI><Literal xml:lang="es">Año de aparicion de la técnica de síntesis.</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:label"/><IRI>#identificadorDeHablante</IRI><Literal xml:lang="es">Identificador de hablante</Literal></AnnotationAssertion>
+<AnnotationAssertion><AnnotationProperty abbreviatedIRI="rdfs:comment"/><IRI>#identificadorDeHablante</IRI><Literal xml:lang="es">Identificador anonimo del hablante.</Literal></AnnotationAssertion>
+</Ontology>

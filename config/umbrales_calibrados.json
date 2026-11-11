@@ -1,0 +1,110 @@
+{
+ "meta": {
+  "fecha": "2026-11-04",
+  "n_audios": 963,
+  "n_entrenamiento": 690,
+  "n_prueba": 273,
+  "hablantes_entrenamiento": [
+   "alan",
+   "alejandro",
+   "ana",
+   "ara",
+   "daniel",
+   "diego",
+   "emiliano",
+   "hector",
+   "jordi",
+   "jorge",
+   "melissa",
+   "nazir",
+   "osorio",
+   "rodrigo",
+   "zam"
+  ],
+  "hablantes_prueba": [
+   "anap",
+   "carlangas",
+   "carlos",
+   "fredo",
+   "karina",
+   "rafa"
+  ],
+  "semilla": 42,
+  "cuantil": 0.2,
+  "criterio": "AUC en entrenamiento; zonas por cuantiles de la clase opuesta",
+  "nota": "Umbrales derivados de un corpus propio; revisar antes de usar con otros generadores o grabaciones."
+ },
+ "reglas": {
+  "E": [
+   {
+    "feature": "spectral_centroid",
+    "auc": 0.951,
+    "fake_high": true,
+    "t_ind": 1408.1997743500683,
+    "t_nat": 1408.1997743500683
+   },
+   {
+    "feature": "hf_energy",
+    "auc": 0.934,
+    "fake_high": true,
+    "t_ind": 0.00258311969228083,
+    "t_nat": 0.00258311969228083
+   },
+   {
+    "feature": "mel_kurt",
+    "auc": 0.213,
+    "fake_high": false,
+    "t_ind": -0.611831521987915,
+    "t_nat": -0.4428684711456299
+   }
+  ],
+  "Pr": [
+   {
+    "feature": "f0_var",
+    "auc": 0.768,
+    "fake_high": true,
+    "t_ind": 0.23908980545700237,
+    "t_nat": 0.19372560869311511
+   },
+   {
+    "feature": "jitter",
+    "auc": 0.271,
+    "fake_high": false,
+    "t_ind": 0.0226122538642538,
+    "t_nat": 0.02611244569998826
+   }
+  ]
+ },
+ "ontologia": {
+  "spectral_centroid": {
+   "base": "CentroideEspectral",
+   "indicio": "CentroideEspectralAnomalo",
+   "naturalidad": "CentroideEspectralNatural",
+   "tecnica": "VocoderNeuronal"
+  },
+  "hf_energy": {
+   "base": "EnergiaDeAltaFrecuencia",
+   "indicio": "AnomaliaDeAltaFrecuencia",
+   "naturalidad": "EnergiaDeAltaFrecuenciaNatural",
+   "tecnica": "VocoderNeuronal"
+  },
+  "mel_kurt": {
+   "base": "CurtosisDelEspectrograma",
+   "indicio": "CurtosisMelAnomala",
+   "naturalidad": "CurtosisMelNatural",
+   "tecnica": "VocoderNeuronal"
+  },
+  "f0_var": {
+   "base": "VariabilidadDeF0",
+   "indicio": "VariabilidadDeF0Anomala",
+   "naturalidad": "VariabilidadDeF0Natural",
+   "tecnica": "SintesisTextoAVoz"
+  },
+  "jitter": {
+   "base": "Jitter",
+   "indicio": "JitterAnomalo",
+   "naturalidad": "JitterNatural",
+   "tecnica": "VocoderGAN"
+  }
+ }
+}
